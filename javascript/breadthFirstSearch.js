@@ -1,12 +1,12 @@
 const breadthFirstSearch = (root, objetive) => {
-    const queque = [root];
-    while (queque.length > 0) {
-        const node = queque.shift();
+    const queue = [root];
+    while (queue.length > 0) {
+        const node = queue.shift();
 
         if (objetive(node)) return node;
 
-        if (node?.left) queque.push(node.left);
-        if (node?.right) queque.push(node.right);
+        if (node?.left) queue.push(node.left);
+        if (node?.right) queue.push(node.right);
     }
 
     return null;
